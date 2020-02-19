@@ -45,7 +45,6 @@ def canon_simple_dividors(x):
             x = x/n
         else:
             n +=1
-        continue
     list = [f'{div}^{all_simple_dividors_list.count(div)}' for div in set(all_simple_dividors_list)]
     return list
 # print(canon_simple_dividors(130))
