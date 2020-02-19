@@ -2,14 +2,14 @@
 def simple(x):
     if x < 2:
         return False
-    if x == 2:
+    elif x == 2:
         return True
     else:
-        for div in range(2,x):
+        for div in range(3,x):
             if x % div == 0:
                 return False
         return True
-# print(simple(25))
+print(simple(2))
 
 # Вывод всех делителей числа
 def all_dividors(x):
@@ -45,9 +45,9 @@ def all_simple_dividors(x):
     return all_simple_dividors_list
 # print(all_simple_dividors(50))
 def canon_simple_dividors(x):
-    for div in set(all_simple_dividors(x)):
-        print(div, '^', all_simple_dividors_list.count(div))
-# canon_simple_dividors(50)
+    list = [f'{div}^{all_simple_dividors_list.count(div)}' for div in set(all_simple_dividors(x))]
+    return list
+# print(canon_simple_dividors(55))
 
 # Самый большой делитель (не обязательно простой) числа.
 def max_dividor(x):
