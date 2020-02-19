@@ -49,6 +49,24 @@ def canon_simple_dividors(x):
     return list
 # print(canon_simple_dividors(55))
 
+# all_simple_dividors_list = []
+# def all_simple_dividors(x):
+#     for n in range(2, int(x)):
+#         if x % n == 0:
+#             all_simple_dividors_list.append(n)
+#             x = x/n
+#             return all_simple_dividors(x)
+#         else:
+#             n +=1
+#         continue
+#     all_simple_dividors_list.append(int(x))
+#     return all_simple_dividors_list
+# # print(all_simple_dividors(50))
+# def canon_simple_dividors(x):
+#     for div in set(all_simple_dividors(x)):
+#         print(div, '^', all_simple_dividors_list.count(div))
+# print(canon_simple_dividors(55))
+
 # Самый большой делитель (не обязательно простой) числа.
 def max_dividor(x):
     if (x == 1) or (simple(x) is True):
